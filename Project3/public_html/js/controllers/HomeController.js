@@ -97,9 +97,11 @@ app.controller('HomeController', ['$scope', function($scope) {
 
 	
 	/* ADD VARIABLES FOR STEP 3 HERE */
-	
-	
-	
+
+	$scope.title = "IMDB + Bot Yuenthon's Top 8 Movies";
+        $scope.owner = "Bot Yuenthon";
+        $scope.github = "https://github.com/ArteriusDayne/is219s16-yuenthonp3/tree/master/Project3/public_html";
+        
 	
 	
 	

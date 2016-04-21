@@ -135,27 +135,38 @@ app.controller('HomeController', ['$scope', function ($scope) {
 
         ];
 
+
+
         /* ADD VARIABLES FOR STEP 3 HERE */
 
         $scope.title = "IMDB + Bot Yuenthon's Top 8 Movies";
         $scope.owner = "Bot Yuenthon";
         $scope.github = "https://github.com/ArteriusDayne/is219s16-yuenthonp3/tree/master/Project3/public_html";
 
+        $scope.range = function (min, max, step) {
+            step = step || 1;
+            var input = [];
+            for (var i = min; i <= max; i += step) {
+                input.push(i);
+            }
+            return input;
+        };
+
         /* ADD FUNCTIONS FOR STEP 7 HERE */
 
         function like(index) {
             movies[index].likes = movies[index].likes + 1;
         }
-        
+
         function dislike(index) {
-             movies[index].dislikes = movies[index].dislikes + 1;
+            movies[index].dislikes = movies[index].dislikes + 1;
         }
-        
+
         function posterClick(index) {
             //a function called “posterClick” that accepts the parameter “index” (Number). When called, it should increment posterindex, for the movie at the
             //given “index”, and show the poster at the updated posterindex index. Once it reaches the last image of the posters array, it should loop back to the first index (index 0).
         }
-        
+
         function timeText(minutes) {
             //a function called “timeText” that accepts the parameter “minutes” (Number). It should convert “minutes” (an integer) to a String of hours and
             //minutes. For example, “timeText(61)” should return “1h 1m”, “timeText(145)” should return “2h 25m”, and “timeText(180)” should return “3h 0m”.

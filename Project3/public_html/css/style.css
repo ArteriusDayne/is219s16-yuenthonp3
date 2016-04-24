@@ -141,10 +141,17 @@ body {
 
 /* ADD YOUR LIKE AND DISLIKE HOVER/MOUSEOVER CSS CODE HERE */
 
+.likes:hover {
+    background: #9edd87;
+    color: #008700;
+    transition-duration: 500ms;
+}
 
-
-
-
+.dislikes:hover {
+    background: #fdd6d6;
+    color: #F65A5B;
+    transition-duration: 500ms;
+}
 
 #app_title {
     color: #ffffff;

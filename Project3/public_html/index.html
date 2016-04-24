@@ -35,10 +35,11 @@
             <div class="container">
                 <div ng-repeat="i in [0, 1, 2, 3]">
 
-                    <div class="col-md-6"> 
+                    <div class="col-md-6"> <!-- First Column -->
                         <div class="thumbnail">
 
-                            <div class="imageInfo" > <img ng-src="{{ movies[i].posters[0]}}"/></div>
+                            <img ng-click="posterClick(i)"  class="poster" ng-src=" {{movies[i].posters[movies[i].posterindex]}}"/>
+                            <div class="imageInfo">Poster {{movies[i].poster + 1}} of {{movie[i].poster.length}} </div>
 
                             <p class="title"> {{ movies[i].title}} ({{ movies[i].country}}) </p> 
                             <p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movies[i].iscore}} </p>
@@ -47,8 +48,8 @@
                             <p class="websites">Websites: <a id="imdb" ng-href="{{ movies[i].imdb}}"> IMDB </a> | <a id="website" ng-href="{{ movies[i].website}}"> Website </a></p>
 
                             <div class="social">
-                                <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[i].likes}} </p>
-                                <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[i].dislikes}} </p>
+                                <p class="likes" ng-click = "like(i)" ><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[i].likes}} </p>
+                                <p class="dislikes"ng-click = "dislike(i)" ><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[i].dislikes}} </p>
                             </div>
                         </div> 
                     </div>
@@ -57,10 +58,11 @@
 
                 <div ng-repeat="i in [4, 5, 6, 7]">
 
-                    <div class="col-md-6"> 
+                    <div class="col-md-6"> <!-- Second Column -->
                         <div class="thumbnail">
 
-                            <div class="imageInfo" > <img ng-src="{{ movies[i].posters[0]}}"/></div>
+                            <img ng-click="posterClick(i)"  class="poster" ng-src=" {{movies[i].posters[movies[i].posterindex]}}"/>
+                            <div class="imageInfo">Poster {{movies[i].poster + 1}} of {{movie[i].poster.length}} </div>
 
                             <p class="title"> {{ movies[i].title}} ({{ movies[i].country}}) </p> 
                             <p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movies[i].iscore}} </p>
@@ -69,8 +71,8 @@
                             <p class="websites">Websites: <a id="imdb" ng-href="{{ movies[i].imdb}}"> IMDB </a> | <a id="website" ng-href="{{ movies[i].website}}"> Website </a></p>
 
                             <div class="social">
-                                <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[i].likes}} </p>
-                                <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[i].dislikes}} </p>
+                                <p class="likes" ng-click = "like(i)" ><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[i].likes}} </p>
+                                <p class="dislikes"ng-click = "dislike(i)" ><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[i].dislikes}} </p>
                             </div>
                         </div> 
                     </div>
